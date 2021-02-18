@@ -36,16 +36,11 @@ Lets you perform arithmetic operations on one or more existing queries.
 Grafana Meta Queries plugin 0.0.1 and above are supported for Grafana: 4.x.x
 
 
-## Supports Nesting 
-* Moving average of moving average
-* Moving average of time shift
-* Time shift of Moving average 
-* Time shift of Time Shift
-
-## Known issue
-* Moving average on arithmetic is not supported
-* TimeShift on arithmetic is not supported
-
+## Known Issues
+* Moving average of moving average is not supported
+* Moving average of time shift is not supported
+* Time shift of Moving average is not supported
+* Time shift of Time Shift is not supported
 
 ## Status
 Lot of features might still not be implemented. Your contributions are welcome.
