@@ -1,7 +1,7 @@
 {
-  "name": "grafana-meta-queries",
+  "name": "Emerald-extend-query",
   "version": "0.0.1",
-  "description": "Grafana plugin for Meta Queries",
+  "description": "Emerald plugin for Extend Queries",
   "main": "index.js",
   "scripts": {
     "build": "grunt",
@@ -9,17 +9,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GoshPosh/grafana-meta-queries.git"
+    "url": "git+https://github.com/GoshPosh/Emerald-extend-query.git"
   },
   "keywords": [
-    "Meta Queries",
+    "Extend Queries",
     "Moving Average",
     "Week over Week"
   ],
   "author": "Gaurav Shah",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/GoshPosh/grafana-meta-queries/issues"
+    "url": "https://github.com/GoshPosh/Emerald-extend-query/issues"
   },
   "devDependencies": {
     "debug": "~2.6.9",
@@ -37,5 +37,5 @@
   "dependencies": {
     "typescript": "^1.7.5"
   },
-  "homepage": "https://github.com/GoshPosh/grafana-meta-queries#readme"
+  "homepage": "https://github.com/GoshPosh/Emerald-extend-query#readme"
 }

@@ -6,10 +6,10 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var lodash_1 = require('lodash');
 var sdk_1 = require('./sdk/sdk');
-var MetaQueriesQueryCtrl = (function (_super) {
-    __extends(MetaQueriesQueryCtrl, _super);
+var ExtendQueriesQueryCtrl = (function (_super) {
+    __extends(ExtendQueriesQueryCtrl, _super);
     /** @ngInject **/
-    function MetaQueriesQueryCtrl($scope, $injector, $q) {
+    function ExtendQueriesQueryCtrl($scope, $injector, $q) {
         var _this = this;
         _super.call(this, $scope, $injector);
         this.queryTypeValidators = {
@@ -40,21 +40,21 @@ var MetaQueriesQueryCtrl = (function (_super) {
             });
         };
     }
-    MetaQueriesQueryCtrl.prototype.targetBlur = function () {
+    ExtendQueriesQueryCtrl.prototype.targetBlur = function () {
         this.errors = this.validateTarget();
         this.refresh();
     };
-    MetaQueriesQueryCtrl.prototype.clearPeriods = function () {
+    ExtendQueriesQueryCtrl.prototype.clearPeriods = function () {
         this.target.periods = this.defaultPeriods;
         this.targetBlur();
     };
     // isValidQuery(type) {
     //   return _.has(this.filterValidators, type);
     // }
-    MetaQueriesQueryCtrl.prototype.isValidQueryType = function (type) {
+    ExtendQueriesQueryCtrl.prototype.isValidQueryType = function (type) {
         return lodash_1.default.has(this.queryTypeValidators, type);
     };
-    MetaQueriesQueryCtrl.prototype.validateMovingAverageQuery = function (target, errs) {
+    ExtendQueriesQueryCtrl.prototype.validateMovingAverageQuery = function (target, errs) {
         if (!target.periods) {
             errs.periods = "Must list specify the period for moving average";
             return false;
@@ -66,14 +66,14 @@ var MetaQueriesQueryCtrl = (function (_super) {
         }
         return true;
     };
-    MetaQueriesQueryCtrl.prototype.validateArithmeticQuery = function (target, errs) {
+    ExtendQueriesQueryCtrl.prototype.validateArithmeticQuery = function (target, errs) {
         if (!target.expression || target.expression.length == 0) {
             errs.expression = "Must specify a javascript expression";
             return false;
         }
         return true;
     };
-    MetaQueriesQueryCtrl.prototype.validateTimeShiftQuery = function (target, errs) {
+    ExtendQueriesQueryCtrl.prototype.validateTimeShiftQuery = function (target, errs) {
         if (!target.periods) {
             errs.periods = "Must list specify the period for moving average";
             return false;
@@ -85,7 +85,7 @@ var MetaQueriesQueryCtrl = (function (_super) {
         }
         return true;
     };
-    MetaQueriesQueryCtrl.prototype.validateTarget = function () {
+    ExtendQueriesQueryCtrl.prototype.validateTarget = function () {
         var errs = {};
         if (!this.target.queryType) {
             errs.queryType = "You must supply a query type.";
@@ -100,8 +100,8 @@ var MetaQueriesQueryCtrl = (function (_super) {
         }
         return errs;
     };
-    MetaQueriesQueryCtrl.templateUrl = 'partials/query.editor.html';
-    return MetaQueriesQueryCtrl;
+    ExtendQueriesQueryCtrl.templateUrl = 'partials/query.editor.html';
+    return ExtendQueriesQueryCtrl;
 })(sdk_1.QueryCtrl);
-exports.MetaQueriesQueryCtrl = MetaQueriesQueryCtrl;
+exports.ExtendQueriesQueryCtrl = ExtendQueriesQueryCtrl;
 //# sourceMappingURL=query_ctrl.js.map

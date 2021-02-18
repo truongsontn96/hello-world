@@ -12,9 +12,9 @@ System.register(['./datasource', './query_ctrl', './config_ctrl'], function(expo
                 config_ctrl_1 = config_ctrl_1_1;
             }],
         execute: function() {
-            exports_1("Datasource", datasource_1.MetaQueriesDatasource);
-            exports_1("QueryCtrl", query_ctrl_1.MetaQueriesQueryCtrl);
-            exports_1("ConfigCtrl", config_ctrl_1.MetaQueriesConfigCtrl);
+            exports_1("Datasource", datasource_1.ExtendQueriesDatasource);
+            exports_1("QueryCtrl", query_ctrl_1.ExtendQueriesQueryCtrl);
+            exports_1("ConfigCtrl", config_ctrl_1.ExtendQueriesConfigCtrl);
         }
     }
 });

@@ -1,3 +1,3 @@
-declare var MetaQueriesDatasource: any;
-export {MetaQueriesDatasource};
+declare var ExtendQueriesDatasource: any;
+export {ExtendQueriesDatasource};
 

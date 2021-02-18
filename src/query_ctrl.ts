@@ -4,7 +4,7 @@ import _ from 'lodash';
 import kbn from 'app/core/utils/kbn';
 import {QueryCtrl} from './sdk/sdk';
 
-export class MetaQueriesQueryCtrl extends QueryCtrl {
+export class ExtendQueriesQueryCtrl extends QueryCtrl {
   static templateUrl = 'partials/query.editor.html';
   errors: any;
   query: any;

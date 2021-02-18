@@ -23,7 +23,7 @@ function (angular, _, dateMath, moment) {
   'use strict';
 
   /** @ngInject */
-  function MetaQueriesDatasource($q, datasourceSrv) {
+  function ExtendQueriesDatasource($q, datasourceSrv) {
     this.datasourceSrv = datasourceSrv;
     this.$q = $q;
 
@@ -179,10 +179,10 @@ function (angular, _, dateMath, moment) {
         options.targets = [metaTarget]
 
         metaTargetPromise = datasourceSrv.get(options.targets[0].datasource).then(function(ds) {
-            if(ds.constructor.name === "MetaQueriesDatasource" && targetsByRefId[query].queryType=="MovingAverage"){
+            if(ds.constructor.name === "ExtendQueriesDatasource" && targetsByRefId[query].queryType=="MovingAverage"){
                 return moving_average(options.targets[0], options, targetsByRefId, datasourceSrv, metaTarget.outputMetricName)
             }
-            if(ds.constructor.name === "MetaQueriesDatasource" && targetsByRefId[query].queryType=="TimeShift"){
+            if(ds.constructor.name === "ExtendQueriesDatasource" && targetsByRefId[query].queryType=="TimeShift"){
                 return timeshift(options.targets[0], options, targetsByRefId, datasourceSrv, metaTarget.outputMetricName)
             }
             else{
@@ -244,10 +244,10 @@ function (angular, _, dateMath, moment) {
         options.targets = [metaTarget]
 
         metaTargetPromise = datasourceSrv.get(options.targets[0].datasource).then(function(ds) {
-            if(ds.constructor.name === "MetaQueriesDatasource" && targetsByRefId[query].queryType=="TimeShift"){
+            if(ds.constructor.name === "ExtendQueriesDatasource" && targetsByRefId[query].queryType=="TimeShift"){
                 return timeshift(options.targets[0], options, targetsByRefId, datasourceSrv, metaTarget.outputMetricName)
             }
-            if(ds.constructor.name === "MetaQueriesDatasource" && targetsByRefId[query].queryType=="MovingAverage"){
+            if(ds.constructor.name === "ExtendQueriesDatasource" && targetsByRefId[query].queryType=="MovingAverage"){
                 return moving_average(options.targets[0], options, targetsByRefId, datasourceSrv, metaTarget.outputMetricName)
             }
 
@@ -364,6 +364,6 @@ function (angular, _, dateMath, moment) {
 
   }
   return {
-      MetaQueriesDatasource: MetaQueriesDatasource
+      ExtendQueriesDatasource: ExtendQueriesDatasource
   };
 });

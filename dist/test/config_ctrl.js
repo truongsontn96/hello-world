@@ -1,9 +1,9 @@
 ///<reference path="../headers/common.d.ts" />
-var MetaQueriesConfigCtrl = (function () {
-    function MetaQueriesConfigCtrl() {
+var ExtendQueriesConfigCtrl = (function () {
+    function ExtendQueriesConfigCtrl() {
     }
-    MetaQueriesConfigCtrl.templateUrl = 'partials/config.html';
-    return MetaQueriesConfigCtrl;
+    ExtendQueriesConfigCtrl.templateUrl = 'partials/config.html';
+    return ExtendQueriesConfigCtrl;
 })();
-exports.MetaQueriesConfigCtrl = MetaQueriesConfigCtrl;
+exports.ExtendQueriesConfigCtrl = ExtendQueriesConfigCtrl;
 //# sourceMappingURL=config_ctrl.js.map

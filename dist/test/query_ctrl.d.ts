@@ -1,6 +1,6 @@
 /// <reference path="../../headers/common.d.ts" />
 import { QueryCtrl } from './sdk/sdk';
-export declare class MetaQueriesQueryCtrl extends QueryCtrl {
+export declare class ExtendQueriesQueryCtrl extends QueryCtrl {
     static templateUrl: string;
     errors: any;
     query: any;

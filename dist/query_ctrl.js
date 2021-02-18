@@ -6,7 +6,7 @@ System.register(['lodash', './sdk/sdk'], function(exports_1) {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
     var lodash_1, sdk_1;
-    var MetaQueriesQueryCtrl;
+    var ExtendQueriesQueryCtrl;
     return {
         setters:[
             function (lodash_1_1) {
@@ -16,10 +16,10 @@ System.register(['lodash', './sdk/sdk'], function(exports_1) {
                 sdk_1 = sdk_1_1;
             }],
         execute: function() {
-            MetaQueriesQueryCtrl = (function (_super) {
-                __extends(MetaQueriesQueryCtrl, _super);
+            ExtendQueriesQueryCtrl = (function (_super) {
+                __extends(ExtendQueriesQueryCtrl, _super);
                 /** @ngInject **/
-                function MetaQueriesQueryCtrl($scope, $injector, $q) {
+                function ExtendQueriesQueryCtrl($scope, $injector, $q) {
                     var _this = this;
                     _super.call(this, $scope, $injector);
                     this.queryTypeValidators = {
@@ -50,21 +50,21 @@ System.register(['lodash', './sdk/sdk'], function(exports_1) {
                         });
                     };
                 }
-                MetaQueriesQueryCtrl.prototype.targetBlur = function () {
+                ExtendQueriesQueryCtrl.prototype.targetBlur = function () {
                     this.errors = this.validateTarget();
                     this.refresh();
                 };
-                MetaQueriesQueryCtrl.prototype.clearPeriods = function () {
+                ExtendQueriesQueryCtrl.prototype.clearPeriods = function () {
                     this.target.periods = this.defaultPeriods;
                     this.targetBlur();
                 };
                 // isValidQuery(type) {
                 //   return _.has(this.filterValidators, type);
                 // }
-                MetaQueriesQueryCtrl.prototype.isValidQueryType = function (type) {
+                ExtendQueriesQueryCtrl.prototype.isValidQueryType = function (type) {
                     return lodash_1["default"].has(this.queryTypeValidators, type);
                 };
-                MetaQueriesQueryCtrl.prototype.validateMovingAverageQuery = function (target, errs) {
+                ExtendQueriesQueryCtrl.prototype.validateMovingAverageQuery = function (target, errs) {
                     if (!target.periods) {
                         errs.periods = "Must list specify the period for moving average";
                         return false;
@@ -76,14 +76,14 @@ System.register(['lodash', './sdk/sdk'], function(exports_1) {
                     }
                     return true;
                 };
-                MetaQueriesQueryCtrl.prototype.validateArithmeticQuery = function (target, errs) {
+                ExtendQueriesQueryCtrl.prototype.validateArithmeticQuery = function (target, errs) {
                     if (!target.expression || target.expression.length == 0) {
                         errs.expression = "Must specify a javascript expression";
                         return false;
                     }
                     return true;
                 };
-                MetaQueriesQueryCtrl.prototype.validateTimeShiftQuery = function (target, errs) {
+                ExtendQueriesQueryCtrl.prototype.validateTimeShiftQuery = function (target, errs) {
                     if (!target.periods) {
                         errs.periods = "Must list specify the period for moving average";
                         return false;
@@ -95,7 +95,7 @@ System.register(['lodash', './sdk/sdk'], function(exports_1) {
                     }
                     return true;
                 };
-                MetaQueriesQueryCtrl.prototype.validateTarget = function () {
+                ExtendQueriesQueryCtrl.prototype.validateTarget = function () {
                     var errs = {};
                     if (!this.target.queryType) {
                         errs.queryType = "You must supply a query type.";
@@ -110,10 +110,10 @@ System.register(['lodash', './sdk/sdk'], function(exports_1) {
                     }
                     return errs;
                 };
-                MetaQueriesQueryCtrl.templateUrl = 'partials/query.editor.html';
-                return MetaQueriesQueryCtrl;
+                ExtendQueriesQueryCtrl.templateUrl = 'partials/query.editor.html';
+                return ExtendQueriesQueryCtrl;
             })(sdk_1.QueryCtrl);
-            exports_1("MetaQueriesQueryCtrl", MetaQueriesQueryCtrl);
+            exports_1("ExtendQueriesQueryCtrl", ExtendQueriesQueryCtrl);
         }
     }
 });

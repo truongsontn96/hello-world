@@ -1,16 +1,16 @@
 ///<reference path="../headers/common.d.ts" />
 System.register([], function(exports_1) {
-    var MetaQueriesConfigCtrl;
+    var ExtendQueriesConfigCtrl;
     return {
         setters:[],
         execute: function() {
-            MetaQueriesConfigCtrl = (function () {
-                function MetaQueriesConfigCtrl() {
+            ExtendQueriesConfigCtrl = (function () {
+                function ExtendQueriesConfigCtrl() {
                 }
-                MetaQueriesConfigCtrl.templateUrl = 'partials/config.html';
-                return MetaQueriesConfigCtrl;
+                ExtendQueriesConfigCtrl.templateUrl = 'partials/config.html';
+                return ExtendQueriesConfigCtrl;
             })();
-            exports_1("MetaQueriesConfigCtrl", MetaQueriesConfigCtrl);
+            exports_1("ExtendQueriesConfigCtrl", ExtendQueriesConfigCtrl);
         }
     }
 });
